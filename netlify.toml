@@ -1,4 +1,9 @@
 [build]
+  publish = "dist/"
+  functions = "functions"
+
+[dev]
+  publish = "dist/"
   functions = "functions"
 
 [[redirects]]
@@ -10,3 +15,5 @@
   for = "/*"
     [headers.values]
     Access-Control-Allow-Origin = "*"
+
+  
