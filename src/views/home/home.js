@@ -37,7 +37,6 @@ export default function home() {
       this.$refresh();
     }
     if (!this.showErrorMessageUsername && !this.showErrorMessagePassword) {
-      console.log(e.submitter.baseURI);
       const response = login(this.username, this.password);
       response
         .then((data) => {
