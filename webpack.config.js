@@ -1,7 +1,7 @@
 module.exports = {
   mode: "development",
   devtool: "inline-source-map",
-  entry: "./app.js",
+  entry: "./src/app.js",
   output: {
     filename: "app.js",
   },
@@ -11,8 +11,8 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.css$/i,
-        use: ["style-loader", "css-loader"],
+        test: /\.s[ac]ss$/i,
+        use: ["style-loader", "css-loader", "sass-loader"],
       },
       {
         test: /\.html$/,

@@ -1,0 +1,12 @@
+.sucess {
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  &__message {
+    text-align: center;
+  }
+}

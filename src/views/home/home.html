@@ -1,7 +1,10 @@
 <script type="text/html" id="home">
   <form class="form">
     <h1 class="form__header">Welcome</h1>
-    <div class="form_inputWrapper">
+    <p class="<%=(showErrorMessageGeneral ? "form__error" : "hidden")%>">
+      <%= errorMessageGeneral %>
+    </p>
+    <div class="form__inputWrapper">
       <label class="form__label" for="username">Username: </label>
       <input
         class="form__input"
@@ -10,8 +13,11 @@
         id="username"
         value="<%= username %>"
       />
+      <p class="<%=(showErrorMessageUsername ? "form__error" : "hidden")%>">
+        <%= errorMessageUsername %>
+      </p>
     </div>
-    <div class="form_inputWrapper">
+    <div class="form__inputWrapper">
       <label class="form__label" for="password">Password: </label>
       <input
         class="form__input"
@@ -20,6 +26,9 @@
         id="password"
         value="<%= password %>"
       />
+      <p class="<%=(showErrorMessagePassword ? "form__error" : "hidden")%>">
+        <%= errorMessagePassword %>
+      </p>
     </div>
     <button class="form__submit" type="submit">Log in</button>
   </form>
