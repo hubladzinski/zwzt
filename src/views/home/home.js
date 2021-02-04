@@ -63,13 +63,21 @@ export default function home() {
 }
 
 const login = async (username, password) => {
-  const request = await fetch("http://localhost:8888/api/login", {
-    method: "POST",
-    body: JSON.stringify({
-      username: username,
-      password: password,
-    }),
-  });
+  console.log(
+    window.location.protocol,
+    window.location.hostname,
+    window.location.port
+  );
+  const request = await fetch(
+    `${window.location.protocol}//${window.location.hostname}:${window.location.port}/api/login`,
+    {
+      method: "POST",
+      body: JSON.stringify({
+        username: username,
+        password: password,
+      }),
+    }
+  );
   const response = await request.json();
   return response;
 };
