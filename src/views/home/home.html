@@ -12,6 +12,7 @@
         name="username"
         id="username"
         value="<%= username %>"
+        autocomplete="username"
       />
       <p class="<%=(showErrorMessageUsername ? "form__error" : "hidden")%>">
         <%= errorMessageUsername %>
@@ -25,6 +26,7 @@
         name="password"
         id="password"
         value="<%= password %>"
+        autocomplete="current-password"
       />
       <p class="<%=(showErrorMessagePassword ? "form__error" : "hidden")%>">
         <%= errorMessagePassword %>

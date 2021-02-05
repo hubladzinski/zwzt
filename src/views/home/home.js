@@ -63,11 +63,6 @@ export default function home() {
 }
 
 const login = async (username, password) => {
-  console.log(
-    window.location.protocol,
-    window.location.hostname,
-    window.location.port
-  );
   const request = await fetch(
     `${window.location.protocol}//${window.location.hostname}:${window.location.port}/api/login`,
     {
